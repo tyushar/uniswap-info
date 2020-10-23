@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Box } from 'rebass'
 import styled from 'styled-components'
-
-import { AutoRow, RowBetween } from '../components/Row'
+import { ButtonLight, ButtonDark } from '../components/ButtonStyled'
 import { AutoColumn } from '../components/Column'
 import PairList from '../components/PairList'
 import TopTokenList from '../components/TokenList'
@@ -11,7 +10,7 @@ import TxnList from '../components/TxnList'
 import GlobalChart from '../components/GlobalChart'
 import Search from '../components/Search'
 import GlobalStats from '../components/GlobalStats'
-
+import { AutoRow, RowBetween, RowFixed } from '../components/Row'
 import { useGlobalData, useGlobalTransactions } from '../contexts/GlobalData'
 import { useAllPairData } from '../contexts/PairData'
 import { useMedia } from 'react-use'
@@ -19,7 +18,7 @@ import Panel from '../components/Panel'
 import { useAllTokenData } from '../contexts/TokenData'
 import { formattedNum, formattedPercent } from '../utils'
 import { TYPE, ThemedBackground } from '../Theme'
-import { transparentize } from 'polished'
+import { between, transparentize } from 'polished'
 import { CustomLink } from '../components/Link'
 
 import { PageWrapper, ContentWrapper } from '../components'
@@ -69,7 +68,18 @@ function GlobalPage() {
       <ContentWrapper>
         <div>
           <AutoColumn gap="24px" style={{ paddingBottom: below800 ? '0' : '24px' }}>
-            <TYPE.largeHeader>{below800 ? 'Protocol Analytics' : 'Uniswap Protocol Analytics'}</TYPE.largeHeader>
+
+            <TYPE.largeHeader>{below800 ? 'Protocol Analytics' : 'Trams Dashboard'}
+
+
+              <ButtonLight style={{ margin: '5px', float: 'right' }}> Connect Wallet🔸</ButtonLight>
+
+              <ButtonDark style={{ margin: '5px', float: 'right' }}>
+                📄Share
+                    </ButtonDark>
+
+            </TYPE.largeHeader>
+
             <Search />
             <GlobalStats />
           </AutoColumn>
@@ -80,7 +90,7 @@ function GlobalPage() {
                   <AutoColumn gap="36px">
                     <AutoColumn gap="20px">
                       <RowBetween>
-                        <TYPE.main>Volume (24hrs)</TYPE.main>
+                        <TYPE.main >Volume (24hrs)</TYPE.main>
                         <div />
                       </RowBetween>
                       <RowBetween align="flex-end">
@@ -135,7 +145,7 @@ function GlobalPage() {
           </Panel>
           <ListOptions gap="10px" style={{ marginTop: '2rem', marginBottom: '.5rem' }}>
             <RowBetween>
-              <TYPE.main fontSize={'1rem'}>Top Pairs</TYPE.main>
+              <TYPE.main fontSize={'1.125rem'}>Top Pairs</TYPE.main>
               <CustomLink to={'/pairs'}>See All</CustomLink>
             </RowBetween>
           </ListOptions>

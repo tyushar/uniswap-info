@@ -60,11 +60,11 @@ const ContentWrapper = styled.div`
 `
 
 export const ButtonLight = styled(Base)`
-  background-color: ${({ color, theme }) => (color ? transparentize(0.9, color) : transparentize(0.9, theme.primary1))};
-  color: ${({ color, theme }) => (color ? darken(0.1, color) : theme.primary1)};
+  background-color: #6993FF;
+  color: white;
 
   min-width: fit-content;
-  border-radius: 12px;
+  border-radius: 6px;
   white-space: nowrap;
 
   a {
@@ -72,8 +72,8 @@ export const ButtonLight = styled(Base)`
   }
 
   :hover {
-    background-color: ${({ color, theme }) =>
-      color ? transparentize(0.8, color) : transparentize(0.8, theme.primary1)};
+    background-color: #60b8ff; =>
+    color ? transparentize(0.8, color) : transparentize(0.8, theme.primary1)};
   }
 `
 
@@ -87,20 +87,20 @@ export function ButtonDropdown({ disabled = false, children, open, ...rest }) {
             <ChevronUp size={24} />
           </StyledIcon>
         ) : (
-          <StyledIcon>
-            <ChevronDown size={24} />
-          </StyledIcon>
-        )}
+            <StyledIcon>
+              <ChevronDown size={24} />
+            </StyledIcon>
+          )}
       </RowBetween>
     </ButtonFaded>
   )
 }
 
 export const ButtonDark = styled(Base)`
-  background-color: ${({ color, theme }) => (color ? color : theme.primary1)};
+  background-color: #F64E60;
   color: white;
   width: fit-content;
-  border-radius: 12px;
+  border-radius: 6px;
   white-space: nowrap;
 
   :hover {
@@ -138,16 +138,18 @@ export function ButtonCustom({ children, bgColor, color, ...rest }) {
 }
 
 export const OptionButton = styled.div`
-  font-weight: 500;
+  font-weight: 600;
   width: fit-content;
   white-space: nowrap;
   padding: 6px;
   border-radius: 6px;
   border: 1px solid ${({ theme }) => theme.bg4};
-  background-color: ${({ active, theme }) => active && theme.bg3};
+  background-color: white;
   color: ${({ theme }) => theme.text1};
 
   :hover {
+    background-color: #60b8ff; =>
+    color ? transparentize(0.8, color) : transparentize(0.8, theme.primary1)};
     cursor: ${({ disabled }) => !disabled && 'pointer'};
   }
 `

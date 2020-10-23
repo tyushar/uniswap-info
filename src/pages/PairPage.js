@@ -132,8 +132,8 @@ function PairPage({ pairAddress, history }) {
   const liquidity = trackedReserveUSD
     ? formattedNum(trackedReserveUSD, true)
     : reserveUSD
-    ? formattedNum(reserveUSD, true)
-    : '-'
+      ? formattedNum(reserveUSD, true)
+      : '-'
   const liquidityChange = formattedPercent(liquidityChangeUSD)
 
   // mark if using untracked liquidity
@@ -147,8 +147,8 @@ function PairPage({ pairAddress, history }) {
     oneDayVolumeUSD || oneDayVolumeUSD === 0
       ? formattedNum(oneDayVolumeUSD === 0 ? oneDayVolumeUntracked : oneDayVolumeUSD, true)
       : oneDayVolumeUSD === 0
-      ? '$0'
-      : '-'
+        ? '$0'
+        : '-'
 
   // mark if using untracked volume
   const [usingUtVolume, setUsingUtVolume] = useState(false)
@@ -236,7 +236,7 @@ function PairPage({ pairAddress, history }) {
                     {token0 && token1 && (
                       <DoubleTokenLogo a0={token0?.id || ''} a1={token1?.id || ''} size={32} margin={true} />
                     )}{' '}
-                    <TYPE.main fontSize={below1080 ? '1.5rem' : '2rem'} style={{ margin: '0 1rem' }}>
+                    <TYPE.main fontWeight={600} fontSize={below1080 ? '1.5rem' : '2rem'} style={{ margin: '0 1rem' }}>
                       {token0 && token1 ? (
                         <>
                           <HoverSpan onClick={() => history.push(`/token/${token0?.id}`)}>{token0.symbol}</HoverSpan>
@@ -247,8 +247,8 @@ function PairPage({ pairAddress, history }) {
                           Pair
                         </>
                       ) : (
-                        ''
-                      )}
+                          ''
+                        )}
                     </TYPE.main>
                   </RowFixed>
                 </RowFixed>
@@ -270,8 +270,8 @@ function PairPage({ pairAddress, history }) {
                       <Bookmark style={{ marginRight: '0.5rem', opacity: 0.4 }} />
                     </StyledIcon>
                   ) : (
-                    <></>
-                  )}
+                        <></>
+                      )}
 
                   <Link external href={getPoolLink(token0?.id, token1?.id)}>
                     <ButtonLight color={backgroundColor}>+ Add Liquidity</ButtonLight>
@@ -298,9 +298,8 @@ function PairPage({ pairAddress, history }) {
                   <TokenLogo address={token0?.id} size={'16px'} />
                   <TYPE.main fontSize={'16px'} lineHeight={1} fontWeight={500} ml={'4px'}>
                     {token0 && token1
-                      ? `1 ${formattedSymbol0} = ${token0Rate} ${formattedSymbol1} ${
-                          parseFloat(token0?.derivedETH) ? '(' + token0USD + ')' : ''
-                        }`
+                      ? `1 ${formattedSymbol0} = ${token0Rate} ${formattedSymbol1} ${parseFloat(token0?.derivedETH) ? '(' + token0USD + ')' : ''
+                      }`
                       : '-'}
                   </TYPE.main>
                 </RowFixed>
@@ -310,16 +309,15 @@ function PairPage({ pairAddress, history }) {
                   <TokenLogo address={token1?.id} size={'16px'} />
                   <TYPE.main fontSize={'16px'} lineHeight={1} fontWeight={500} ml={'4px'}>
                     {token0 && token1
-                      ? `1 ${formattedSymbol1} = ${token1Rate} ${formattedSymbol0}  ${
-                          parseFloat(token1?.derivedETH) ? '(' + token1USD + ')' : ''
-                        }`
+                      ? `1 ${formattedSymbol1} = ${token1Rate} ${formattedSymbol0}  ${parseFloat(token1?.derivedETH) ? '(' + token1USD + ')' : ''
+                      }`
                       : '-'}
                   </TYPE.main>
                 </RowFixed>
               </FixedPanel>
             </AutoRow>
             <>
-              {!below1080 && <TYPE.main fontSize={'1.125rem'}>Pair Stats</TYPE.main>}
+              {!below1080 && <TYPE.main fontWeight={600} fontSize={'1.125rem'}>Pair Stats</TYPE.main>}
               <PanelWrapper style={{ marginTop: '1.5rem' }}>
                 <Panel style={{ height: '100%' }}>
                   <AutoColumn gap="20px">
@@ -328,7 +326,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
                         {liquidity}
                       </TYPE.main>
                       <TYPE.main>{liquidityChange}</TYPE.main>
@@ -342,7 +340,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
                         {volume}
                       </TYPE.main>
                       <TYPE.main>{volumeChange}</TYPE.main>
@@ -356,7 +354,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
                         {fees}
                       </TYPE.main>
                       <TYPE.main>{volumeChange}</TYPE.main>
@@ -373,7 +371,7 @@ function PairPage({ pairAddress, history }) {
                     <Hover onClick={() => history.push(`/token/${token0?.id}`)} fade={true}>
                       <AutoRow gap="4px">
                         <TokenLogo address={token0?.id} />
-                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={500}>
+                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={600}>
                           <RowFixed>
                             {reserve0 ? formattedNum(reserve0) : ''}{' '}
                             <FormattedName text={token0?.symbol ?? ''} maxCharacters={8} margin={true} />
@@ -384,7 +382,7 @@ function PairPage({ pairAddress, history }) {
                     <Hover onClick={() => history.push(`/token/${token1?.id}`)} fade={true}>
                       <AutoRow gap="4px">
                         <TokenLogo address={token1?.id} />
-                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={500}>
+                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={600}>
                           <RowFixed>
                             {reserve1 ? formattedNum(reserve1) : ''}{' '}
                             <FormattedName text={token1?.symbol ?? ''} maxCharacters={8} margin={true} />
@@ -408,7 +406,7 @@ function PairPage({ pairAddress, history }) {
                   />
                 </Panel>
               </PanelWrapper>
-              <TYPE.main fontSize={'1.125rem'} style={{ marginTop: '3rem' }}>
+              <TYPE.main fontWeight={600} fontSize={'1.125rem'} style={{ marginTop: '3rem' }}>
                 Transactions
               </TYPE.main>{' '}
               <Panel
@@ -419,7 +417,7 @@ function PairPage({ pairAddress, history }) {
                 {transactions ? <TxnList transactions={transactions} /> : <Loader />}
               </Panel>
               <RowBetween style={{ marginTop: '3rem' }}>
-                <TYPE.main fontSize={'1.125rem'}>Pair Information</TYPE.main>{' '}
+                <TYPE.main fontWeight={600} fontSize={'1.125rem'}>Pair Information</TYPE.main>{' '}
               </RowBetween>
               <Panel
                 rounded

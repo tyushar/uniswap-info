@@ -7,7 +7,7 @@ import { useMedia } from 'react-use'
 import { transparentize } from 'polished'
 import { TYPE } from '../../Theme'
 import { withRouter } from 'react-router-dom'
-import { TrendingUp, List, PieChart, Disc } from 'react-feather'
+import { TrendingUp, List, PieChart, Disc, Home, Clipboard } from 'react-feather'
 import Link from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   z-index: 9999;
   box-sizing: border-box;
   /* background-color: #1b1c22; */
-  background: linear-gradient(193.68deg, #1b1c22 0.68%, #000000 100.48%);
+  background: #60b8ff29;
   color: ${({ theme }) => theme.bg2};
 
   @media screen and (max-width: 800px) {
@@ -38,9 +38,9 @@ const Wrapper = styled.div`
 
 const Option = styled.div`
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   opacity: ${({ activeText }) => (activeText ? 1 : 0.6)};
-  color: ${({ theme }) => theme.white};
+  color: black;
   display: flex;
   :hover {
     opacity: 1;
@@ -71,7 +71,7 @@ const HeaderText = styled.div`
     opacity: 1;
   }
   a {
-    color: ${({ theme }) => theme.white};
+    color: black;
   }
 `
 
@@ -118,7 +118,7 @@ function SideNav({ history }) {
               <AutoColumn gap="1.25rem" style={{ marginTop: '1rem' }}>
                 <BasicLink to="/home">
                   <Option activeText={history.location.pathname === '/home' ?? undefined}>
-                    <TrendingUp size={20} style={{ marginRight: '.75rem' }} />
+                    <Home size={22} style={{ marginRight: '.75rem' }} />
                     Overview
                   </Option>
                 </BasicLink>
@@ -130,7 +130,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <Disc size={20} style={{ marginRight: '.75rem' }} />
+                    <Disc size={22} style={{ marginRight: '.75rem' }} />
                     Tokens
                   </Option>
                 </BasicLink>
@@ -142,7 +142,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <PieChart size={20} style={{ marginRight: '.75rem' }} />
+                    <Clipboard size={22} style={{ marginRight: '.75rem' }} />
                     Pairs
                   </Option>
                 </BasicLink>
@@ -155,7 +155,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <List size={20} style={{ marginRight: '.75rem' }} />
+                    <List size={22} style={{ marginRight: '.75rem' }} />
                     Accounts
                   </Option>
                 </BasicLink>
@@ -164,8 +164,8 @@ function SideNav({ history }) {
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://uniswap.org" target="_blank">
-                Uniswap.org
+              <Link href="https://Trams.io" target="_blank">
+                Trams.io
               </Link>
             </HeaderText>
             <HeaderText>
@@ -193,8 +193,8 @@ function SideNav({ history }) {
           {!below1180 && (
             <Polling style={{ marginLeft: '.5rem' }}>
               <PollingDot />
-              <a href="/" style={{ color: 'white' }}>
-                <TYPE.small color={'white'}>
+              <a href="/" style={{ color: 'black' }}>
+                <TYPE.small color={'black'}>
                   Updated {!!seconds ? seconds + 's' : '-'} ago <br />
                 </TYPE.small>
               </a>
@@ -202,10 +202,10 @@ function SideNav({ history }) {
           )}
         </DesktopWrapper>
       ) : (
-        <MobileWrapper>
-          <Title />
-        </MobileWrapper>
-      )}
+          <MobileWrapper>
+            <Title />
+          </MobileWrapper>
+        )}
     </Wrapper>
   )
 }

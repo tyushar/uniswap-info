@@ -81,11 +81,11 @@ const TextWrapper = styled(Text)`
 
 export const TYPE = {
   main(props) {
-    return <TextWrapper fontWeight={500} fontSize={14} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={600} fontSize={20} color={'text1'} {...props} />
   },
 
   body(props) {
-    return <TextWrapper fontWeight={400} fontSize={14} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={600} fontSize={14} color={'text1'} {...props} />
   },
 
   small(props) {
@@ -97,11 +97,11 @@ export const TYPE = {
   },
 
   largeHeader(props) {
-    return <TextWrapper fontWeight={500} color={'text1'} fontSize={24} {...props} />
+    return <TextWrapper fontWeight={600} color={'text1'} fontSize={24} {...props} />
   },
 
   light(props) {
-    return <TextWrapper fontWeight={400} color={'text3'} fontSize={14} {...props} />
+    return <TextWrapper fontWeight={600} color={'text3'} fontSize={14} {...props} />
   },
 
   pink(props) {
@@ -144,8 +144,7 @@ export const ThemedBackground = styled.div`
   max-width: 100vw !important;
   height: 200vh;
   mix-blend-mode: color;
-  background: ${({ backgroundColor }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${backgroundColor} 0%, rgba(255, 255, 255, 0) 100%)`};
+  background: f7f8fa;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -155,10 +154,10 @@ export const ThemedBackground = styled.div`
 `
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://rsms.me/inter/inter.css');
-  html { font-family: 'Inter', sans-serif; }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  html { font-family: 'Poppins', sans-serif; }
   @supports (font-variation-settings: normal) {
-    html { font-family: 'Inter var', sans-serif; }
+    html { font-family: 'Poppins', sans-serif; }
   }
   
   html,
