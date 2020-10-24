@@ -60,7 +60,7 @@ const ContentWrapper = styled.div`
 `
 
 export const ButtonLight = styled(Base)`
-  background-color: #6993FF;
+  background-color: #60b8ff;
   color: white;
 
   min-width: fit-content;
@@ -72,7 +72,7 @@ export const ButtonLight = styled(Base)`
   }
 
   :hover {
-    background-color: #60b8ff; =>
+    background-color: #60b8ff9c; =>
     color ? transparentize(0.8, color) : transparentize(0.8, theme.primary1)};
   }
 `
@@ -104,7 +104,7 @@ export const ButtonDark = styled(Base)`
   white-space: nowrap;
 
   :hover {
-    background-color: ${({ color, theme }) => (color ? darken(0.1, color) : darken(0.1, theme.primary1))};
+    background-color: #60b8ff; => (color ? darken(0.1, color) : darken(0.1, theme.primary1))};
   }
 `
 

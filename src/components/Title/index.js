@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Flex } from 'rebass'
 import Link from '../Link'
 import { RowFixed } from '../Row'
-import Logo from '../../assets/logo_white.svg'
+import Logo from '../../assets/logo_white.png'
 import Wordmark from '../../assets/wordmark_white.png'
 
 const TitleWrapper = styled.div`
@@ -33,6 +33,7 @@ export default function Title() {
       <Flex alignItems="center">
         <RowFixed>
           <img width={'50px'} style={{ marginLeft: '8px', marginTop: '0px' }} src={Wordmark} alt="logo" />
+          <text style={{ color: 'black', fontSize: '16px', fontWeight: '500', fontStyle: "oblique" }}>TRAMS DEX</text>
         </RowFixed>
       </Flex>
     </TitleWrapper>
