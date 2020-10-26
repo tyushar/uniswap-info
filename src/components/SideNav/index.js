@@ -7,8 +7,8 @@ import { useMedia } from 'react-use'
 import { transparentize } from 'polished'
 import { TYPE } from '../../Theme'
 import { withRouter } from 'react-router-dom'
-import { TrendingUp, List, PieChart, Disc, Home, Clipboard } from 'react-feather'
-import Link from '../Link'
+import { TrendingUp, List, PieChart, Disc, Home, Link } from 'react-feather'
+import Link2 from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
 import Toggle from '../Toggle'
@@ -142,7 +142,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <Clipboard size={22} style={{ marginRight: '.75rem' }} />
+                    <Link size={22} style={{ marginRight: '.75rem' }} />
                     Pairs
                   </Option>
                 </BasicLink>
@@ -164,29 +164,29 @@ function SideNav({ history }) {
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://Trams.io" target="_blank">
+              <Link2 href="https://Trams.io" target="_blank">
                 Trams.io
-              </Link>
+              </Link2>
             </HeaderText>
             <HeaderText>
-              <Link href="https://v1.uniswap.info" target="_blank">
+              <Link2 href="https://v1.uniswap.info" target="_blank">
                 V1 Analytics
-              </Link>
+              </Link2>
             </HeaderText>
             <HeaderText>
-              <Link href="https://uniswap.org/docs/v2" target="_blank">
+              <Link2 href="https://uniswap.org/docs/v2" target="_blank">
                 Docs
-              </Link>
+              </Link2>
             </HeaderText>
             <HeaderText>
-              <Link href="https://discord.com/invite/XErMcTq" target="_blank">
+              <Link2 href="https://discord.com/invite/XErMcTq" target="_blank">
                 Discord
-              </Link>
+              </Link2>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/UniswapProtocol" target="_blank">
+              <Link2 href="https://twitter.com/UniswapProtocol" target="_blank">
                 Twitter
-              </Link>
+              </Link2>
             </HeaderText>
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
           </AutoColumn>

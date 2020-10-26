@@ -20,7 +20,7 @@ import { formattedNum, formattedPercent } from '../utils'
 import { TYPE, ThemedBackground } from '../Theme'
 import { between, transparentize } from 'polished'
 import { CustomLink } from '../components/Link'
-
+import { Share2, CheckCircle } from 'react-feather'
 import { PageWrapper, ContentWrapper } from '../components'
 
 const ListOptions = styled(AutoRow)`
@@ -72,11 +72,16 @@ function GlobalPage() {
             <TYPE.largeHeader>{below800 ? 'Protocol Analytics' : 'Trams Dashboard'}
 
 
-              <ButtonLight style={{ margin: '5px', float: 'right' }}> Connect Wallet🔸</ButtonLight>
+              <ButtonLight style={{ margin: '5px', float: 'right' }}>
+                <CheckCircle size={13} style={{ margin: '2px', float: 'right' }} />
+                 Connect Wallet
+
+                 </ButtonLight>
 
               <ButtonDark style={{ margin: '5px', float: 'right' }}>
-                📄Share
-                    </ButtonDark>
+                Share
+                <Share2 size={13} style={{ margin: '2px', float: 'right' }} />
+              </ButtonDark>
 
             </TYPE.largeHeader>
 
