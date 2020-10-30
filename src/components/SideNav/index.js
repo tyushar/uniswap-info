@@ -12,7 +12,10 @@ import Link2 from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
 import Toggle from '../Toggle'
-
+import Overviewicon from '../../assets/overview.png'
+import Tokensicon from '../../assets/tokens.png'
+import Pairsicon from '../../assets/pairs.png'
+import Accounticon from '../../assets/account.png'
 const Wrapper = styled.div`
   height: ${({ isMobile }) => (isMobile ? 'initial' : '100vh')};
   background-color: ${({ theme }) => transparentize(0.4, theme.bg1)};
@@ -22,6 +25,7 @@ const Wrapper = styled.div`
   top: 0px;
   z-index: 9999;
   box-sizing: border-box;
+  border-radius: 8px;
   /* background-color: #1b1c22; */
   background: #60b8ff29;
   color: ${({ theme }) => theme.bg2};
@@ -39,7 +43,7 @@ const Wrapper = styled.div`
 const Option = styled.div`
   font-weight: 500;
   font-size: 18px;
-  opacity: ${({ activeText }) => (activeText ? 1 : 0.6)};
+  opacity: ${({ activeText }) => (activeText ? 1 : 0.8)};
   color: black;
   display: flex;
   :hover {
@@ -118,7 +122,7 @@ function SideNav({ history }) {
               <AutoColumn gap="1.25rem" style={{ marginTop: '1rem' }}>
                 <BasicLink to="/home">
                   <Option activeText={history.location.pathname === '/home' ?? undefined}>
-                    <Home size={22} style={{ marginRight: '.75rem' }} />
+                    <img width={'30px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
                     Overview
                   </Option>
                 </BasicLink>
@@ -130,7 +134,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <Disc size={22} style={{ marginRight: '.75rem' }} />
+                    <img width={'30px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
                     Tokens
                   </Option>
                 </BasicLink>
@@ -142,7 +146,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <Link size={22} style={{ marginRight: '.75rem' }} />
+                    <img width={'30px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
                     Pairs
                   </Option>
                 </BasicLink>
@@ -155,7 +159,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <List size={22} style={{ marginRight: '.75rem' }} />
+                    <img width={'30px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Accounticon} alt="logo" />
                     Accounts
                   </Option>
                 </BasicLink>
