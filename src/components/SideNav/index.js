@@ -169,27 +169,27 @@ function SideNav({ history }) {
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
               <Link2 href="https://Trams.io" target="_blank">
-                Trams.io
+                🚉 Trams.io
               </Link2>
             </HeaderText>
             <HeaderText>
               <Link2 href="https://v1.uniswap.info" target="_blank">
-                V1 Analytics
+                📈 V1 Analytics
               </Link2>
             </HeaderText>
             <HeaderText>
               <Link2 href="https://uniswap.org/docs/v2" target="_blank">
-                Docs
+                📝 Docs
               </Link2>
             </HeaderText>
             <HeaderText>
               <Link2 href="https://discord.com/invite/XErMcTq" target="_blank">
-                Discord
+                🧿 Discord
               </Link2>
             </HeaderText>
             <HeaderText>
               <Link2 href="https://twitter.com/UniswapProtocol" target="_blank">
-                Twitter
+                🐤 Twitter
               </Link2>
             </HeaderText>
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
