@@ -26,7 +26,7 @@ const ChartWrapper = styled.div`
 `
 
 const PriceOption = styled(OptionButton)`
-  border-radius: 2px;
+  border-radius: 1px;
 `
 
 const CHART_VIEW = {

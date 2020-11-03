@@ -234,9 +234,9 @@ function PairPage({ pairAddress, history }) {
                 <RowFixed style={{ flexWrap: 'wrap', minWidth: '100px' }}>
                   <RowFixed>
                     {token0 && token1 && (
-                      <DoubleTokenLogo a0={token0?.id || ''} a1={token1?.id || ''} size={32} margin={true} />
+                      <DoubleTokenLogo a0={token0?.id || ''} a1={token1?.id || ''} size={24} margin={true} />
                     )}{' '}
-                    <TYPE.main fontWeight={600} fontSize={below1080 ? '1.5rem' : '2rem'} style={{ margin: '0 1rem' }}>
+                    <TYPE.main fontWeight={600} fontSize={below1080 ? '1rem' : '1rem'} style={{ margin: '0 1rem' }}>
                       {token0 && token1 ? (
                         <>
                           <HoverSpan onClick={() => history.push(`/token/${token0?.id}`)}>{token0.symbol}</HoverSpan>
@@ -326,7 +326,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={600}>
                         {liquidity}
                       </TYPE.main>
                       <TYPE.main>{liquidityChange}</TYPE.main>
@@ -340,7 +340,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={600}>
                         {volume}
                       </TYPE.main>
                       <TYPE.main>{volumeChange}</TYPE.main>
@@ -354,7 +354,7 @@ function PairPage({ pairAddress, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={600}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={600}>
                         {fees}
                       </TYPE.main>
                       <TYPE.main>{volumeChange}</TYPE.main>
@@ -371,7 +371,7 @@ function PairPage({ pairAddress, history }) {
                     <Hover onClick={() => history.push(`/token/${token0?.id}`)} fade={true}>
                       <AutoRow gap="4px">
                         <TokenLogo address={token0?.id} />
-                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={600}>
+                        <TYPE.main fontSize={16} lineHeight={1} fontWeight={600}>
                           <RowFixed>
                             {reserve0 ? formattedNum(reserve0) : ''}{' '}
                             <FormattedName text={token0?.symbol ?? ''} maxCharacters={8} margin={true} />
@@ -382,7 +382,7 @@ function PairPage({ pairAddress, history }) {
                     <Hover onClick={() => history.push(`/token/${token1?.id}`)} fade={true}>
                       <AutoRow gap="4px">
                         <TokenLogo address={token1?.id} />
-                        <TYPE.main fontSize={20} lineHeight={1} fontWeight={600}>
+                        <TYPE.main fontSize={16} lineHeight={1} fontWeight={600}>
                           <RowFixed>
                             {reserve1 ? formattedNum(reserve1) : ''}{' '}
                             <FormattedName text={token1?.symbol ?? ''} maxCharacters={8} margin={true} />
@@ -468,7 +468,7 @@ function PairPage({ pairAddress, history }) {
                       </RowFixed>
                     </TYPE.main>
                     <AutoRow align="flex-end">
-                      <TYPE.main style={{ marginTop: '.5rem' }} fontSize={16}>
+                      <TYPE.main style={{ marginTop: '.5rem' }} fontSize={14}>
                         {token1 && token1.id.slice(0, 6) + '...' + token1.id.slice(38, 42)}
                       </TYPE.main>
                       <CopyHelper toCopy={token1?.id} />

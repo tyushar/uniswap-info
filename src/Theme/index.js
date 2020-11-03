@@ -31,8 +31,8 @@ const theme = (darkMode, color) => ({
   text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
   // special case text types
-  white: '#FFFFFF',
-
+  white: darkMode ? '#FAFAFA' : '#000000',
+  black1: darkMode ? '#1F1F1F' : '#1F1F1F',
   // backgrounds / greys
   bg1: darkMode ? '#212429' : '#FAFAFA',
   bg2: darkMode ? '#2C2F36' : '#F7F8FA',
@@ -81,15 +81,15 @@ const TextWrapper = styled(Text)`
 
 export const TYPE = {
   main(props) {
-    return <TextWrapper fontWeight={600} fontSize={20} color={'text1'} {...props} />
-  },
-
-  body(props) {
     return <TextWrapper fontWeight={600} fontSize={14} color={'text1'} {...props} />
   },
 
+  body(props) {
+    return <TextWrapper fontWeight={600} fontSize={12} color={'text1'} {...props} />
+  },
+
   small(props) {
-    return <TextWrapper fontWeight={500} fontSize={11} color={'text1'} {...props} />
+    return <TextWrapper fontWeight={500} fontSize={10} color={'text1'} {...props} />
   },
 
   header(props) {
@@ -97,7 +97,7 @@ export const TYPE = {
   },
 
   largeHeader(props) {
-    return <TextWrapper fontWeight={600} color={'text1'} fontSize={24} {...props} />
+    return <TextWrapper fontWeight={600} color={'text1'} fontSize={20} {...props} />
   },
 
   light(props) {
@@ -166,7 +166,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    font-size: 14px;    
+    font-size: 13px;    
     background-color: ${({ theme }) => theme.bg6};
   }
 

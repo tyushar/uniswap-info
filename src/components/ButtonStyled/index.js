@@ -141,10 +141,10 @@ export const OptionButton = styled.div`
   font-weight: 600;
   width: fit-content;
   white-space: nowrap;
-  padding: 6px;
+  padding: 3px;
   border-radius: 6px;
-  border: 1px solid ${({ theme }) => theme.bg4};
-  background-color: white;
+  border: 1px solid #02040a4a;
+  background-color: #60b8fe;
   color: ${({ theme }) => theme.text1};
 
   :hover {

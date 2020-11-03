@@ -129,8 +129,8 @@ function TokenPage({ address, history }) {
     oneDayVolumeUSD || oneDayVolumeUSD === 0
       ? formattedNum(oneDayVolumeUSD === 0 ? oneDayVolumeUT : oneDayVolumeUSD, true)
       : oneDayVolumeUSD === 0
-      ? '$0'
-      : '-'
+        ? '$0'
+        : '-'
 
   // mark if using untracked volume
   const [usingUtVolume, setUsingUtVolume] = useState(false)
@@ -203,14 +203,14 @@ function TokenPage({ address, history }) {
             <RowBetween
               style={{
                 flexWrap: 'wrap',
-                marginBottom: '2rem',
+                marginBottom: '1rem',
                 alignItems: 'flex-start',
               }}
             >
               <RowFixed style={{ flexWrap: 'wrap' }}>
                 <RowFixed style={{ alignItems: 'baseline' }}>
-                  <TokenLogo address={address} size="32px" style={{ alignSelf: 'center' }} />
-                  <TYPE.main fontSize={below1080 ? '1.5rem' : '2rem'} fontWeight={500} style={{ margin: '0 1rem' }}>
+                  <TokenLogo address={address} size="26px" style={{ alignSelf: 'center' }} />
+                  <TYPE.main fontSize={below1080 ? '1rem' : '1rem'} fontWeight={500} style={{ margin: '0 1rem' }}>
                     <RowFixed gap="6px">
                       <FormattedName text={name ? name + ' ' : ''} maxCharacters={16} style={{ marginRight: '6px' }} />{' '}
                       {formattedSymbol ? `(${formattedSymbol})` : ''}
@@ -218,7 +218,7 @@ function TokenPage({ address, history }) {
                   </TYPE.main>{' '}
                   {!below1080 && (
                     <>
-                      <TYPE.main fontSize={'1.5rem'} fontWeight={500} style={{ marginRight: '1rem' }}>
+                      <TYPE.main fontSize={'1rem'} fontWeight={500} style={{ marginRight: '1rem' }}>
                         {price}
                       </TYPE.main>
                       {priceChange}
@@ -239,8 +239,8 @@ function TokenPage({ address, history }) {
                       <Bookmark style={{ marginRight: '0.5rem', opacity: 0.4 }} />
                     </StyledIcon>
                   ) : (
-                    <></>
-                  )}
+                        <></>
+                      )}
                   <Link href={getPoolLink(address)} target="_blank">
                     <ButtonLight color={backgroundColor}>+ Add Liquidity</ButtonLight>
                   </Link>
@@ -264,7 +264,7 @@ function TokenPage({ address, history }) {
                       </RowBetween>
                       <RowBetween align="flex-end">
                         {' '}
-                        <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                        <TYPE.main fontSize={'1.2rem'} lineHeight={1} fontWeight={500}>
                           {price}
                         </TYPE.main>
                         <TYPE.main>{priceChange}</TYPE.main>
@@ -279,7 +279,7 @@ function TokenPage({ address, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={500}>
                         {liquidity}
                       </TYPE.main>
                       <TYPE.main>{liquidityChange}</TYPE.main>
@@ -293,7 +293,7 @@ function TokenPage({ address, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={500}>
                         {volume}
                       </TYPE.main>
                       <TYPE.main>{volumeChange}</TYPE.main>
@@ -308,7 +308,7 @@ function TokenPage({ address, history }) {
                       <div />
                     </RowBetween>
                     <RowBetween align="flex-end">
-                      <TYPE.main fontSize={'1.5rem'} lineHeight={1} fontWeight={500}>
+                      <TYPE.main fontSize={'1.1rem'} lineHeight={1} fontWeight={500}>
                         {oneDayTxns ? localNumber(oneDayTxns) : oneDayTxns === 0 ? 0 : '-'}
                       </TYPE.main>
                       <TYPE.main>{txnChangeFormatted}</TYPE.main>
@@ -341,8 +341,8 @@ function TokenPage({ address, history }) {
               {address && fetchedPairsList ? (
                 <PairList color={backgroundColor} address={address} pairs={fetchedPairsList} />
               ) : (
-                <Loader />
-              )}
+                  <Loader />
+                )}
             </Panel>
             <RowBetween mt={40} mb={'1rem'}>
               <TYPE.main fontSize={'1.125rem'}>Transactions</TYPE.main> <div />
@@ -364,20 +364,20 @@ function TokenPage({ address, history }) {
                 <TokenDetailsLayout>
                   <Column>
                     <TYPE.main>Symbol</TYPE.main>
-                    <Text style={{ marginTop: '.5rem' }} fontSize={24} fontWeight="500">
+                    <Text style={{ marginTop: '1rem' }} fontSize={14} fontWeight="500">
                       <FormattedName text={symbol} maxCharacters={12} />
                     </Text>
                   </Column>
                   <Column>
                     <TYPE.main>Name</TYPE.main>
-                    <TYPE.main style={{ marginTop: '.5rem' }} fontSize={24} fontWeight="500">
+                    <TYPE.main style={{ marginTop: '1.1rem' }} fontSize={14} fontWeight="500">
                       <FormattedName text={name} maxCharacters={16} />
                     </TYPE.main>
                   </Column>
                   <Column>
                     <TYPE.main>Address</TYPE.main>
                     <AutoRow align="flex-end">
-                      <TYPE.main style={{ marginTop: '.5rem' }} fontSize={24} fontWeight="500">
+                      <TYPE.main style={{ marginTop: '.5rem' }} fontSize={14} fontWeight="500">
                         {address.slice(0, 8) + '...' + address.slice(36, 42)}
                       </TYPE.main>
                       <CopyHelper toCopy={address} />

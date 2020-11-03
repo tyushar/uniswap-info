@@ -33,7 +33,7 @@ export default function Title() {
       <Flex alignItems="center">
         <RowFixed>
           <img width={'50px'} style={{ marginLeft: '8px', marginTop: '0px' }} src={Wordmark} alt="logo" />
-          <text style={{ color: 'black', fontSize: '16px', fontWeight: '600', fontStyle: "oblique" }}>TRAMS DEX</text>
+          <text style={{ color: 'white', fontSize: '16px', fontWeight: '600', fontStyle: "oblique" }}>TRAMS DEX</text>
         </RowFixed>
       </Flex>
     </TitleWrapper>
