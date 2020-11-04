@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   border-radius: 8px;
   /* background-color: #1b1c22; */
-  background: #60b8ff;
+  background: ${({ theme }) => theme.bg7};
   color: ${({ theme }) => theme.bg2};
 
   @media screen and (max-width: 800px) {
@@ -85,7 +85,7 @@ const Polling = styled.div`
   bottom: 0;
   padding: 1rem;
   color: white;
-  opacity: 0.4;
+  opacity: 2;
   transition: opacity 0.25s ease;
   :hover {
     opacity: 1;
@@ -99,7 +99,7 @@ const PollingDot = styled.div`
   margin-right: 0.5rem;
   margin-top: 3px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.green1};
+  background-color: ${({ theme }) => theme.red1};
 `
 
 function SideNav({ history }) {
@@ -122,6 +122,7 @@ function SideNav({ history }) {
                 <BasicLink to="/home">
                   <Option activeText={history.location.pathname === '/home' ?? undefined}>
                     <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
+                    &nbsp;&nbsp;
                     Overview
                   </Option>
                 </BasicLink>
@@ -134,6 +135,7 @@ function SideNav({ history }) {
                     }
                   >
                     <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
+                    &nbsp;&nbsp;
                     Tokens
                   </Option>
                 </BasicLink>
@@ -146,6 +148,7 @@ function SideNav({ history }) {
                     }
                   >
                     <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
+                    &nbsp;&nbsp;
                     Pairs
                   </Option>
                 </BasicLink>
@@ -159,6 +162,7 @@ function SideNav({ history }) {
                     }
                   >
                     <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Accounticon} alt="logo" />
+                    &nbsp;&nbsp;
                     Accounts
                   </Option>
                 </BasicLink>

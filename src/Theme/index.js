@@ -40,6 +40,7 @@ const theme = (darkMode, color) => ({
   bg4: darkMode ? '#565A69' : '#CED0D9',
   bg5: darkMode ? '#565A69' : '#888D9B',
   bg6: darkMode ? '#000' : '#FFFFFF',
+  bg7: darkMode ? '#2C2F36' : '#60b8ff',
 
   //specialty colors
   modalBG: darkMode ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.6)',
