@@ -44,11 +44,9 @@ const Wrapper = styled.div`
   z-index: 9999;
   width: 100%;
   min-width: 300px;
+  border: 1px solid rgb(212 212 212);
   box-sizing: border-box;
-  box-shadow: ${({ open, small }) =>
-    !open && !small
-      ? '0px 24px 32px #608bff14, 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04) '
-      : 'none'};
+  
   @media screen and (max-width: 500px) {
     background: ${({ theme }) => transparentize(0.4, theme.bg1)};
     box-shadow: ${({ open }) =>
@@ -432,8 +430,8 @@ export const Search = ({ small = false }) => {
                 : below470
                   ? 'Search swap...'
                   : below700
-                    ? 'Search pairs and tokens...'
-                    : 'Search  pairs and tokens...'
+                    ? '🚉  Search for anything in Trams...'
+                    : '🚉  Search for anything in Trams...'
           }
           value={value}
           onChange={(e) => {

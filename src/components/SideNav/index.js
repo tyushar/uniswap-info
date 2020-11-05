@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 `
 
 const Option = styled.div`
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   opacity: ${({ activeText }) => (activeText ? 1 : 0.8)};
   color: white;
@@ -67,7 +67,7 @@ const MobileWrapper = styled.div`
 const HeaderText = styled.div`
   margin-right: 0.75rem;
   font-size: 0.825rem;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-box;
   display: -webkit-inline-box;
   :hover {
@@ -121,7 +121,7 @@ function SideNav({ history }) {
               <AutoColumn gap="1.25rem" style={{ marginTop: '1rem' }}>
                 <BasicLink to="/home">
                   <Option activeText={history.location.pathname === '/home' ?? undefined}>
-                    <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
+                    <img width={'22px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
                     &nbsp;&nbsp;
                     Overview
                   </Option>
@@ -134,7 +134,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
+                    <img width={'24px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
                     &nbsp;&nbsp;
                     Tokens
                   </Option>
@@ -147,7 +147,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
+                    <img width={'24px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
                     &nbsp;&nbsp;
                     Pairs
                   </Option>
@@ -161,7 +161,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'26px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Accounticon} alt="logo" />
+                    <img width={'22px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Accounticon} alt="logo" />
                     &nbsp;&nbsp;
                     Accounts
                   </Option>
