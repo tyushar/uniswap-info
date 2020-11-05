@@ -43,11 +43,16 @@ const Wrapper = styled.div`
 const Option = styled.div`
   font-weight: 600;
   font-size: 16px;
-  opacity: ${({ activeText }) => (activeText ? 1 : 0.8)};
   color: white;
   display: flex;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  padding-top: .4rem;
+  padding-bottom: .4rem;
   :hover {
-    opacity: 2;
+    display: flex;
+    background-color: #FFFFFF;
+    color: #60b8ff;
   }
 `
 
@@ -118,10 +123,10 @@ function SideNav({ history }) {
           <AutoColumn gap="1rem" style={{ marginLeft: '.75rem', marginTop: '1.5rem' }}>
             <Title />
             {!below1080 && (
-              <AutoColumn gap="1.25rem" style={{ marginTop: '1rem' }}>
+              <AutoColumn gap="0.5rem" style={{ marginTop: '1rem' }}>
                 <BasicLink to="/home">
                   <Option activeText={history.location.pathname === '/home' ?? undefined}>
-                    <img width={'22px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
+                    <img width={'22px'} style={{ marginLeft: '4px', marginTop: '0px' }} src={Overviewicon} alt="logo" />
                     &nbsp;&nbsp;
                     Overview
                   </Option>
@@ -134,7 +139,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'24px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
+                    <img width={'24px'} style={{ marginLeft: '4px', marginTop: '0px' }} src={Tokensicon} alt="logo" />
                     &nbsp;&nbsp;
                     Tokens
                   </Option>
@@ -147,7 +152,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'24px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
+                    <img width={'24px'} style={{ marginLeft: '4px', marginTop: '0px' }} src={Pairsicon} alt="logo" />
                     &nbsp;&nbsp;
                     Pairs
                   </Option>
@@ -161,7 +166,7 @@ function SideNav({ history }) {
                       undefined
                     }
                   >
-                    <img width={'22px'} style={{ marginLeft: '2px', marginTop: '0px' }} src={Accounticon} alt="logo" />
+                    <img width={'22px'} style={{ marginLeft: '5px', marginTop: '0px' }} src={Accounticon} alt="logo" />
                     &nbsp;&nbsp;
                     Accounts
                   </Option>
