@@ -64,7 +64,7 @@ body {
 }
 .card.card-custom > .card-header .card-title {
     display: flex;
-    margin: 0.5rem;
+    margin: 1rem;
     margin-left: 0;
 }
 .align-items-start {
@@ -86,7 +86,7 @@ h3 {
 }
 .card.card-custom > .card-header .card-title, .card.card-custom > .card-header .card-title .card-label {
 
-    font-size: 1.275rem;
+    font-size: 1.125rem;
 }
 .text-dark {
     color: #181C32 !important;
@@ -97,6 +97,7 @@ h3 {
 .font-size-sm {
     font-size: 0.925rem;
 }
+
 .text-muted {
     color: #B5B5C3 !important;
 }
@@ -230,10 +231,10 @@ btn:not(:disabled):not(.disabled) {
     letter-spacing: 1px;
 }
 .table.table-head-custom thead tr, .table.table-head-custom thead th {
-    font-weight: 600;
-    color: #B5B5C3 !important;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    font-weight: 500;
+    color: #1f1f1f !important;
+    font-size: 12px;
+    text-transform: capitalize;
 }
 .text-left {
     text-align: left !important;
@@ -252,10 +253,10 @@ tr {
     letter-spacing: 1px;
 }
 .table.table-head-custom thead tr, .table.table-head-custom thead th {
-    font-weight: 600;
-    color: #B5B5C3 !important;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    font-weight: 500;
+    color: #1f1f1f !important;
+    font-size: 12px;
+    text-transform: capitalize;
 }
 .table.table-vertical-center th, .table.table-vertical-center td {
     vertical-align: middle;
@@ -273,7 +274,7 @@ th {
     display: table-cell;
 }
 .text-dark-75 {
-    color: #3F4254 !important;
+    color: #1f1f1f !important;
 }
 .table.table-head-bg thead tr, .table.table-head-bg thead th {
     background-color: #F3F6F9;
@@ -281,9 +282,9 @@ th {
     letter-spacing: 1px;
 }
 table.table-head-custom thead tr, .table.table-head-custom thead th {
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: capitalize;
 }
 tbody {
     display: table-row-group;
@@ -341,7 +342,7 @@ tr {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    border-radius: 0.42rem;
+    border-radius: 2rem;
 }
 a.text-hover-primary, .text-hover-primary {
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
@@ -352,11 +353,11 @@ a.text-hover-primary, .text-hover-primary {
 }
 
 .text-dark-75 {
-    color: #3F4254 !important;
+    color: #1f1f1f !important;
 }
 
 .font-weight-bolder {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 
 .mb-1, .my-1 {
@@ -399,11 +400,11 @@ svg {
 }
 
 .text-dark-75 {
-    color: #3F4254 !important;
+    color: #1f1f1f !important;
 }
 
 .font-weight-bolder {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 
 .d-block {

@@ -29,14 +29,14 @@ export function AdvanceTablesWidget9({ className }) {
                             <table className="table table-head-custom table-vertical-center table-head-bg table-borderless">
                                 <thead>
                                     <tr className="text-left">
-                                        <th style={{ minWidth: "250px" }} className="pl-7">
+                                        <th style={{ minWidth: "225px" }} className="pl-7">
                                             <span className="text-dark-75">pool</span>
                                         </th>
                                         <th style={{ minWidth: "100px" }}>staked</th>
                                         <th style={{ minWidth: "100px" }}>underlying tokens</th>
                                         <th style={{ minWidth: "100px" }}>total locked values</th>
                                         <th style={{ minWidth: "100px" }}>yield per $1000</th>
-                                        <th style={{ minWidth: "100px" }}>roi</th>
+                                        <th style={{ minWidth: "100px" }}>ROI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,7 +56,7 @@ export function AdvanceTablesWidget9({ className }) {
                                                         href="#"
                                                         className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                                                     >
-                                                        London Trams
+                                                        Melbourne Trams
                           </a>
                                                     <span className="text-muted font-weight-bold d-block">
                                                         Trams DAI/WETH
@@ -88,7 +88,7 @@ export function AdvanceTablesWidget9({ className }) {
                                         </td>
                                         <td>
                                             <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                                                5.76
+                                                🚉5.76
                       </span>
                                             <span className="text-muted font-weight-bold d-block">
                                                 Trams/day
@@ -118,7 +118,7 @@ export function AdvanceTablesWidget9({ className }) {
                                                         href="#"
                                                         className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                                                     >
-                                                        Seoul trams
+                                                        Tokyo Trams
                           </a>
                                                     <span className="text-muted font-weight-bold d-block">
                                                         TRAMS USDC/WETH
@@ -153,7 +153,7 @@ export function AdvanceTablesWidget9({ className }) {
                                         </td>
                                         <td>
                                             <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                                                10.2
+                                                🚉10.2
                       </span>
                                             <span className="text-muted font-weight-bold d-block">
                                                 Trams/day
@@ -183,7 +183,7 @@ export function AdvanceTablesWidget9({ className }) {
                                                         href="#"
                                                         className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                                                     >
-                                                        Singapore Trams
+                                                        California Trams
                           </a>
                                                     <span className="text-muted font-weight-bold d-block">
                                                         TRAMS USDC/WETH
@@ -215,7 +215,7 @@ export function AdvanceTablesWidget9({ className }) {
                                         </td>
                                         <td>
                                             <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                                                1.320
+                                                🚉1.3
                       </span>
                                             <span className="text-muted font-weight-bold d-block">
                                                 Trams/day
@@ -246,7 +246,7 @@ export function AdvanceTablesWidget9({ className }) {
                                                         href="#"
                                                         className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
                                                     >
-                                                        Kolkata Trams
+                                                        Oslo Trams
                           </a>
                                                     <span className="text-muted font-weight-bold d-block">
                                                         TRAMS WETH/TRAMS
@@ -279,7 +279,7 @@ export function AdvanceTablesWidget9({ className }) {
                                         </td>
                                         <td>
                                             <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                                                2.36
+                                                🚉2.36
                       </span>
                                             <span className="text-muted font-weight-bold d-block">
                                                 Trams/day

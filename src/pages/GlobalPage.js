@@ -140,12 +140,12 @@ function GlobalPage() {
               </Panel>
             </AutoColumn>
           )}
-          <ListOptions gap="10px" style={{ marginTop: '2rem', marginBottom: '.5rem' }}>
+          <ListOptions gap="10px" style={{ marginTop: '0.5rem', marginBottom: '.5rem' }}>
             <RowBetween>
               <TYPE.main fontSize={'1.125rem'}></TYPE.main>
             </RowBetween>
           </ListOptions>
-          <Panel style={{ marginTop: '6px', padding: '1.125rem 0 ' }}>
+          <Panel style={{ marginTop: '2px', padding: '0.01rem 0 ' }}>
             <StationList />
           </Panel>
           <ListOptions gap="10px" style={{ marginTop: '2rem', marginBottom: '.5rem' }}>
