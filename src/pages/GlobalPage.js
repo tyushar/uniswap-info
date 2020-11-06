@@ -6,6 +6,7 @@ import { ButtonLight, ButtonDark } from '../components/ButtonStyled'
 import { AutoColumn } from '../components/Column'
 import PairList from '../components/PairList'
 import TopTokenList from '../components/TokenList'
+import StationList from '../components/StationList'
 import TxnList from '../components/TxnList'
 import GlobalChart from '../components/GlobalChart'
 import Search from '../components/Search'
@@ -139,6 +140,14 @@ function GlobalPage() {
               </Panel>
             </AutoColumn>
           )}
+          <ListOptions gap="10px" style={{ marginTop: '2rem', marginBottom: '.5rem' }}>
+            <RowBetween>
+              <TYPE.main fontSize={'1.125rem'}></TYPE.main>
+            </RowBetween>
+          </ListOptions>
+          <Panel style={{ marginTop: '6px', padding: '1.125rem 0 ' }}>
+            <StationList />
+          </Panel>
           <ListOptions gap="10px" style={{ marginTop: '2rem', marginBottom: '.5rem' }}>
             <RowBetween>
               <TYPE.main fontSize={'1.125rem'}>Top Tokens</TYPE.main>
